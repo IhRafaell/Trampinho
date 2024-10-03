@@ -1,19 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;900;1,100;900&display=swap');
 
 body {
-    background-color: #A39BCA;
     margin: 0;
     font-family: "Montserrat", sans-serif;
-    width: 100%;
-    height: auto;
+}
+* {
+    box-sizing: border-box;
 }
 /* header */
+.header{
+    width: 100%;
+    background-color: #A393F5;
+}
 .nav1 {
     display: flex;
     flex-direction: row;
     align-items: center;
-    flex-wrap: wrap;
-    margin-top: 5vh;
+    justify-content: space-between;
 }
 
 .logo img {
@@ -31,7 +34,7 @@ body {
 .user{
     display: flex;
     gap: 5vw;
-    margin-left: 32vw;
+    margin-left: auto;
 }
 .entrar, .cadastrar {
     display: flex;
@@ -41,23 +44,27 @@ body {
     color: black;
     background-color: white;
     width: 20vh;
-    max-width: 20vh;  
+    max-width: 90%;  
     height: 8vh; 
     border-radius: 5vh;
 }
 
 /* main */
 .main {
+    width: 100%;
     display: flex;
     flex-direction: row;
-    background-color: #A39BCA;
+    background-color: #A393F5;
     flex-wrap: wrap;
 }
 
+.imagem-main {
+    width: 70vh;
+    height: auto;
+}
+
 .imagem-main img {
-    margin-top: 15vh;
-    width: 70vh;;
-    height: auto; 
+    max-width: 100%;
 }
 .texto-main {
     margin-top: 10vh; 
@@ -88,6 +95,7 @@ body {
     width: 100%;
  }
 .pesquisa{
+    text-align: center;
     display: flex;
     width: 20vw; 
     height: 5vh;
@@ -103,24 +111,42 @@ body {
 .cards {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr)); /* Ajusta automaticamente o número de colunas */
-    gap: 2vw; /* Espaçamento entre os cards */
-    padding: 2vw; /* Espaçamento interno */
-    width: 100%; /* Ocupar toda a largura disponível */
+    grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));  
+    padding: 2vw;
+    margin: 2vh auto;
+    width: 100%;
 }
 .card{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
     background-color: white;
     width: 15vw;
     height: 50vh;
     border-radius: 5vh;
 }
+.card img{
+    max-width: 100%;
+}
+.card h1{
+    font-size: larger;
+}
+.card button{
+    font-weight: bold;
+    margin-top: 1vw;
+    border: 0;
+    width: 50%;
+}
+
 @media (max-width: 768px) {
     .titulo h1 {
-        font-size: 6vw; 
+        font-size: 6vw;
     }
 
     .entrar, .cadastrar {
-        width: 90%; 
+        width: 90%;
     }
 
     .logo img {
@@ -130,12 +156,12 @@ body {
 
 @media (max-width: 480px) {
     .titulo h1 {
-        font-size: 8vw; 
+        font-size: 8vw;
     }
 
     .entrar, .cadastrar {
-        font-size: 3.5vw; 
-        height: 8vh; 
+        font-size: 3.5vw;
+        height: 8vh;
     }
 
     .logo img {
