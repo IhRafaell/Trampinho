@@ -1,15 +1,18 @@
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
 }
+
 * {
     box-sizing: border-box;
 }
-/* header */
-.header{
+
+.header {
     width: 100%;
     background-color: #A393F5;
 }
+
 .nav1 {
     display: flex;
     flex-direction: row;
@@ -19,36 +22,37 @@ body {
 }
 
 .logo img {
-    width: 5vw; 
-    height: auto; 
-    margin-left: 2vw; 
+    width: 5vw;
+    height: auto;
+    margin-left: 2vw;
 }
 
 .titulo h1 {
     color: white;
-    font-size: 5vw; 
+    font-size: 5vw;
     margin: 0;
     margin-left: 2vh;
 }
-.user{
+
+.user {
     display: flex;
     gap: 5vw;
     margin-left: auto;
 }
+
 .entrar, .cadastrar {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1vw; 
+    font-size: 1vw;
     color: black;
     background-color: white;
     width: 20vh;
-    max-width: 90%;  
-    height: 8vh; 
+    max-width: 90%;
+    height: 8vh;
     border-radius: 5vh;
 }
 
-/* main */
 .main {
     width: 100%;
     display: flex;
@@ -65,19 +69,19 @@ body {
 .imagem-main img {
     max-width: 100%;
 }
+
 .texto-main {
-    margin-top: 10vh; 
-    margin-left: 5vw; 
-    max-width: 50vw; 
+    margin-top: 10vh;
+    margin-left: 5vw;
+    max-width: 50vw;
     color: white;
-    font-size: 2vw; 
+    font-size: 2vw;
     line-height: 1.5;
-    text-align: justify; 
+    text-align: justify;
     font-weight: bold;
 }
- /* galeria */
 
- .galeria{
+.galeria {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -85,58 +89,106 @@ body {
     width: 100%;
     height: auto;
     background-color: #585275;
- }
- .nav2{
+}
+
+.nav2 {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 10vh;
     width: 100%;
- }
-.pesquisa{
+}
+
+.pesquisa {
     text-align: center;
     display: flex;
-    width: 20vw; 
+    width: 20vw;
     height: 5vh;
     border-radius: 5vh;
-    border: none; 
-    padding: 10px; 
-    font-size: 1vw; 
+    border: none;
+    padding: 10px;
+    font-size: 1vw;
 }
+
 .pesquisa::placeholder {
-    color: #A39BCA; 
+    color: #A39BCA;
     font-weight: 300;
 }
+
 .cards {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));  
+    display: flex; 
+    justify-content: center; 
+    align-items: flex-start; 
+    gap: 2vw; 
     padding: 2vw;
     margin: 2vh auto;
-    width: 100%;
+    height: auto; 
+    position: relative;
 }
-.card{
+
+.card {
     align-items: center;
     justify-content: center;
     text-align: center;
     display: flex;
     flex-direction: column;
     background-color: white;
-    width: 15vw;
-    height: 50vh;
+    width: 15vw; 
+    height: 50vh; 
     border-radius: 5vh;
+    transition: width 0.3s ease, height 0.3s ease;
+    overflow: hidden;
+    position: relative;
 }
-.card img{
+
+.card.expanded {
+    width: 100%; 
+    max-width: 400px; 
+    height: auto; 
+    z-index: 4;
+    transition: width 0.3s ease, height 0.3s ease; 
+}
+
+.mais-informações {
+    display: none;
+}
+
+.card.expanded .mais-informações {
+    display: block; 
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 2;
+}
+
+.card.expanded ~ .overlay {
+    display: block;
+}
+
+.card img {
     max-width: 100%;
 }
-.card h1{
+
+.card h1 {
     font-size: larger;
 }
-.card button{
+
+.card button {
     font-weight: bold;
     margin-top: 1vw;
     border: 0;
     width: 50%;
+}
+
+.hidden {
+    display: none;
 }
 
 @media (max-width: 768px) {
