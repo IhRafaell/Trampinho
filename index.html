@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trampinho</title>
     <link rel="stylesheet" href="./css/index.css">
+    <script src="scripts/main.js" defer type="module"></script>
 </head>
 <body>
         <header class="header">
@@ -13,12 +14,11 @@
                 <div class="titulo">
                     <h1>Trampinho</h1>
                 </div>
-                <div class="user">
-                    <button class="entrar" onclick="LoginPage()">
-                        <h2>Entrar</h2>
-                    </button>
-                    <button class="cadastrar" onclick="CadastroPage()">
-                        <h2>Cadastrar</h2>
+                </div>
+                <div class="input">
+                    <button id="google-login-btn" class="google-button">
+                        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google Logo" class="google-icon">
+                        Logar com Google
                     </button>
                 </div>
             </nav>
