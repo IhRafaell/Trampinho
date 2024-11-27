@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js";
-import { getAuth, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js"; // Corrigido aqui
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js"; 
 
 const firebaseConfig = {
   apiKey: "AIzaSyAO9MFh_gyKTwOodLamsCK1ZZHxMjNU-4U",
@@ -19,12 +19,12 @@ auth.languageCode = 'en';
 const provider = new GoogleAuthProvider();
 const googleLogin = document.getElementById("google-login-btn");
 googleLogin.addEventListener("click", function () {
-  signInWithPopup(auth, provider) // Corrigido aqui
+  signInWithPopup(auth, provider) 
     .then((result) => {
       const credential = GoogleAuthProvider.credentialFromResult(result);
       const user = result.user;
       console.log(user);
-      window.location.href = "../cadastro.html";
+      window.location.href = "../logado.html";
     })
     .catch((error) => {
       const errorCode = error.code;
