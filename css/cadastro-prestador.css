@@ -1,0 +1,132 @@
+/* Estilo Global */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #F3F3F3;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Header */
+header {
+    width: 100%;
+    background-color: #A393F5;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+/* Formulário */
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+form {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+}
+
+form label {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    color: #585275;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+}
+
+form textarea {
+    resize: none;
+    height: 100px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #A393F5;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #8574e0;
+}
+
+#responseMessage {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1em;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    form {
+        padding: 20px;
+    }
+
+    form label {
+        font-size: 1em;
+    }
+
+    form input,
+    form textarea {
+        font-size: 0.9em;
+    }
+
+    form button {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    form label {
+        font-size: 0.9em;
+    }
+
+    form input,
+    form textarea {
+        font-size: 0.8em;
+    }
+
+    form button {
+        font-size: 0.9em;
+    }
+}

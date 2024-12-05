@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Prestador</title>
+    <link rel="stylesheet" href="css/cadastro-prestador.css">
+    <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Cadastro de Prestador</h1>
+    </header>
+    <main>
+        <form id="cadastroForm">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="servico">Serviço:</label>
+            <input type="text" id="servico" name="servico" required>
+
+            <label for="localizacao">Localização:</label>
+            <input type="text" id="localizacao" name="localizacao" required>
+
+            <label for="preco">Preço:</label>
+            <input type="text" id="preco" name="preco" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="text" id="telefone" name="telefone" required>
+
+            <label for="descricao">Descrição:</label>
+            <textarea id="descricao" name="descricao" required></textarea>
+
+            <label for="imagem">URL da Imagem:</label>
+            <input type="text" id="imagem" name="imagem" required>
+
+            <button type="submit" onclick="TelaInicial()">Cadastrar</button>
+        </form>
+        <p id="responseMessage"></p>
+    </main>
+    <script src="scripts/cadastro-prestador.js"></script>
+    <script src="scripts/functions.js"></script>
+</body>
+</html>

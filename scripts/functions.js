@@ -1,7 +1,7 @@
-function LoginPage(){
-    window.location.href = "";
+function CadastroPage(){
+    window.location.href = "./cadastro-prestador.html";
 }
 
-function CadastroPage(){
-    window.location.href = "./cadastro.html";
+function TelaInicial(){
+    window.location.href = "./index.html"
 }

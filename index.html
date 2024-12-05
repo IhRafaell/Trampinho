@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trampinho</title>
     <link rel="stylesheet" href="./css/index.css">
-    <script src="scripts/main.js" defer type="module"></script>
+    <script src="users-google.js" defer type="module"></script>
+    <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
 </head>
 <body>
         <header class="header">
@@ -14,12 +15,14 @@
                 <div class="titulo">
                     <h1>Trampinho</h1>
                 </div>
-                </div>
                 <div class="input">
-                    <button id="google-login-btn" class="google-btn">
+                    <button id="google-login-btn" class="button">
                         <span>Usuário comum:</span>
                         <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google Logo" class="google-icon">
-                        Logar com Google
+                    </button>
+                    <button class="button" onclick="CadastroPage()">
+                        <span>Usuário Prestador:</span>
+                        <img src="imgs/maleta.png" alt="Maleta Logo" class="maleta-icon">
                     </button>
                 </div>
             </nav>
@@ -33,6 +36,6 @@
         <footer class="footer">
             <p>Todos os direitos reservados para Rafael Luiz</p>
         </footer>
-        <script src="scripts/index.js"></script>
+        <script src="scripts/functions.js"></script>
 </body>
 </html>

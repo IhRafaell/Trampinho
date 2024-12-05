@@ -3,9 +3,6 @@ body {
     margin: 0;
 }
 
-html, body {
-    height: 100%;
-}
 
 * {
     box-sizing: border-box;
@@ -52,7 +49,9 @@ html, body {
 }
 
 .cards {
+    width: 100%;
     display: flex; 
+    flex-wrap: wrap;
     justify-content: center; 
     align-items: flex-start; 
     gap: 2vw; 

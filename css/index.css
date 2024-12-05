@@ -35,7 +35,6 @@ body {
     margin-left: 2vh;
 }
 
-/* Main */
 .main {
     width: 100%;
     display: flex;
@@ -64,7 +63,6 @@ body {
     font-weight: bold;
 }
 
-/* Galeria */
 .galeria {
     display: flex;
     align-items: center;
@@ -75,15 +73,12 @@ body {
     padding: 20px;
 }
 
-.nav2 {
+.input{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 10vh;
-    width: 100%;
 }
 
-.google-btn {
+.button {
+    margin: 10px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -99,16 +94,16 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.2s ease, background-color 0.2s ease;
 }
-.google-btn span{
+.button span{
     margin: 10px;
 }
 
-.google-btn:hover {
+.button:hover {
     background-color: #f7f7f7;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-.google-btn:active {
+.button:active {
     background-color: #eeeeee;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
@@ -119,6 +114,11 @@ body {
     margin-right: 10px;
 }
 
+.maleta-icon{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
 
 .footer {
     background-color: #585275;
