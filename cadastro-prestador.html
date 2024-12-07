@@ -13,28 +13,36 @@
     </header>
     <main>
         <form id="cadastroForm">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
+            <!-- Nome e Sobrenome -->
+            <label for="nome">Nome e Sobrenome:</label>
+            <input type="text" id="nome" name="nome" maxlength="20" placeholder="Ex: João Batista" required>
 
+            <!-- Serviço -->
             <label for="servico">Serviço:</label>
-            <input type="text" id="servico" name="servico" required>
+            <input type="text" id="servico" name="servico" maxlength="50" placeholder="Ex: Manicure" required>
 
+            <!-- Localização -->
             <label for="localizacao">Localização:</label>
-            <input type="text" id="localizacao" name="localizacao" required>
+            <input type="text" id="localizacao" name="localizacao" maxlength="50" placeholder="Ex: Recife - Pernambuco" required>
 
+            <!-- Preço -->
             <label for="preco">Preço:</label>
-            <input type="text" id="preco" name="preco" required>
+            <input type="text" id="preco" name="preco" maxlength="30" pattern="^(R\$)?\d+([,.]\d{2})?( - R\$?\d+([,.]\d{2})?)?$" placeholder="Ex: R$100,00 - R$150,00" required>
 
+            <!-- Telefone -->
             <label for="telefone">Telefone:</label>
-            <input type="text" id="telefone" name="telefone" required>
+            <input type="tel" id="telefone" name="telefone" maxlength="15" pattern="\(\d{2}\) \d{4,5}-\d{4}" placeholder="Ex: (81) 91234-5678" required>
 
+            <!-- Descrição -->
             <label for="descricao">Descrição:</label>
-            <textarea id="descricao" name="descricao" required></textarea>
+            <textarea id="descricao" name="descricao" maxlength="500" placeholder="Ex: Sou natural de Recife e comecei a fazer manicure inspirado por minha mãe" required></textarea>
 
+            <!-- URL da Imagem -->
             <label for="imagem">URL da Imagem:</label>
-            <input type="text" id="imagem" name="imagem" required>
+            <input type="url" id="imagem" name="imagem" maxlength="200" placeholder="Ex: https://www.exemplo.com/imagem.jpg" required>
 
-            <button type="submit" onclick="TelaInicial()">Cadastrar</button>
+            <!-- Botão de Cadastro -->
+            <button type="submit">Cadastrar</button>
         </form>
         <p id="responseMessage"></p>
     </main>
